@@ -2,7 +2,7 @@ import { Doctor } from './../js/doctor.js';
 
 $(document).ready(function() {
   $('#input').submit(function(event) {
-    $('#list').text("")
+    $('#results').text("")
     event.preventDefault();
 
     let doctor = new Doctor();
@@ -15,8 +15,9 @@ $(document).ready(function() {
       let lat = body.results[0].geometry.location.lat;
       let lng = body.results[0].geometry.location.lng;
       let query = $('#query').val();
-      let doctorQuery = doctor.doctorApi(lat, lng, query);
-      $('#list').append("EARTHQUAKETRON LOADING<img src = 'img/loading.gif'>")
+      let type = $('#searchType').val();
+      let doctorQuery = doctor.doctorApi(lat, lng, query, type);
+      $('#results').append("<h3>Finding Doctors</h3><img src = 'img/loading.gif'>")
 
       doctorQuery.then(function(response) {
         $('#results').text('')
