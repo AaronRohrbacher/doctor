@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <link href="build/css/vendor.css" rel="stylesheet" type="text/css">
+    <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <form id="input">
+          <label for="search">Enter a city</search>
+          <input type="text" id="location">
+          <label for="query">What's wrong with ya?</label>
+          <input type="text" id ="query">
+          <button type="submit">Search doctors</button>
+
+          <!-- <select id="sort">
+            <option value="time">Sort by Newest First </option>
+            <option value="time-asc">Sort by Oldest First</option>
+            <option value="magnitude">Sort by Hardest Quakes</option>
+            <option value="magnitude-asc">Sort by Limpest Quakes</option>
+          </select> -->
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Practice</th>
+            </tr>
+          </thead>
+          <tbody id="results">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
