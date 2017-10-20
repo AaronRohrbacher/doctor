@@ -28,6 +28,9 @@ $(document).ready(function() {
           data.practices.forEach(function(practice) {
             $('#results').append('<tr><td>')
             $('#results').append(`<h3>${practice.name}</h3><p><strong>Address:</strong></p> <p>${practice.visit_address.street}</p><p>${practice.visit_address.city}, ${practice.visit_address.state} ${practice.visit_address.zip}</p>`);
+            if (practice.website) {
+              $('#results').append(`<a href = "${practice.website}">Visit ${practice.name}'s website</a>`)
+            }
             practice.phones.forEach(function(phone){
               $('#results').append(`<p><strong>${phone.type}:  </strong>${phone.number}</p>`)
             });
