@@ -14,19 +14,23 @@
           <input type="text" id="location">
           <label for "searchType">Search by:</label>
           <select id = "searchType">
-            <option value ="name">Name</option>
-            <option value ="disease">Search:</option>
+            <option value ="name">Doctor or practice name</option>
+            <option value ="disease">What's wrong with ya?</option>
           </select>
-          <label for="query">What's wrong with ya?</label>
+          <label for="query">Search:</label>
           <input type="text" id ="query">
-          <button type="submit">Search doctors</button>
+          <select class="parameter " id = "sort">
+            <option value="full-name-asc"> Full name, ascending  </option>
+            <option value="full-name-desc"> Full name, descending </option>
+            <option value="last-name-asc"> Last name, ascending  </option>
+            <option value="last-name-desc"> Last name, descending  </option>
+            <option value="first-name-asc"> First name, ascending </option>
+            <option value="first-name-desc"> First name, descending  </option>
+            <option value="best-match-asc"> Best Match  </option>
+            <option value="rating-asc"> Highest Rated  </option>
+          </select>
 
-          <!-- <select id="sort">
-            <option value="time">Sort by Newest First </option>
-            <option value="time-asc">Sort by Oldest First</option>
-            <option value="magnitude">Sort by Hardest Quakes</option>
-            <option value="magnitude-asc">Sort by Limpest Quakes</option>
-          </select> -->
+          <button type="submit">Search doctors</button>
         </form>
       </div>
     </div>

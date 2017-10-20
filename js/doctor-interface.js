@@ -16,7 +16,8 @@ $(document).ready(function() {
       let lng = body.results[0].geometry.location.lng;
       let query = $('#query').val();
       let type = $('#searchType').val();
-      let doctorQuery = doctor.doctorApi(lat, lng, query, type);
+      let sort = $('#sort').val()
+      let doctorQuery = doctor.doctorApi(lat, lng, query, type, sort);
       $('#results').append("<h3>Finding Doctors</h3><img src = 'img/loading.gif'>")
 
       doctorQuery.then(function(response) {
@@ -45,10 +46,10 @@ $(document).ready(function() {
         $('#results').text("No practices found");
       }
         }, function(error) {
-        $('#results').text(`There has been an error with your doctor API query: ${error.message}`);
+        $('#results').text(`There has been an internal error with your doctor API query: ${error.message}`);
       });
       }, function(error) {
-      $('#results').text(`There has been an error with your location API query: ${error.message}`);
+      $('#results').text(`There has been an internal error with your location API query: ${error.message}`);
     });
   });
 });
