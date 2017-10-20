@@ -22,14 +22,16 @@ $(document).ready(function() {
       doctorQuery.then(function(response) {
         $('#results').text('')
         let body = JSON.parse(response);
+        debugger;
         if (body.data.length > 0) {
         body.data.forEach(function(data) {
           data.practices.forEach(function(practice) {
-            $('#results').append(`<tr><td><h3>${practice.name}</h3><p><strong>Address:</strong></p> <p>${practice.visit_address.street}</p><p>${practice.visit_address.city}, ${practice.visit_address.state} ${practice.visit_address.zip}</p>`);
+            $('#results').append('<tr><td>')
+            $('#results').append(`<h3>${practice.name}</h3><p><strong>Address:</strong></p> <p>${practice.visit_address.street}</p><p>${practice.visit_address.city}, ${practice.visit_address.state} ${practice.visit_address.zip}</p>`);
             practice.phones.forEach(function(phone){
-              $('#results').append(`<p><strong>${phone.type}:  </strong>${phone.number}</p></td></tr>`)
-              $('#results').append(`<p>Thing</p>`)
+              $('#results').append(`<p><strong>${phone.type}:  </strong>${phone.number}</p>`)
             });
+            $('#results').append('</td></tr>')
           });
         });
       } else {
