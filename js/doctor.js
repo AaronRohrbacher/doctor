@@ -2,7 +2,7 @@ var apiKey = require('./../.env').apiKey;
 
 export class Doctor {
 
-  locationApi(search) {
+  locationApi(location) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
       let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${search}&key=AIzaSyBb-6lyykgnZhSEv_FdW6BWi_7BjznhOmw`;
