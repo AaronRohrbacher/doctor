@@ -22,12 +22,16 @@ $(document).ready(function() {
       doctorQuery.then(function(response) {
         $('#results').text('')
         let body = JSON.parse(response);
-        debugger;
         if (body.data.length > 0) {
         body.data.forEach(function(data) {
           data.practices.forEach(function(practice) {
             $('#results').append('<tr><td>')
-            $('#results').append(`<h3>${practice.name}</h3><p><strong>Address:</strong></p> <p>${practice.visit_address.street}</p><p>${practice.visit_address.city}, ${practice.visit_address.state} ${practice.visit_address.zip}</p>`);
+            $('#results').append(`<h3>${practice.name}</h3>`)
+            if (practice.accepts_new_patients === true) {
+              $('#results').append('<p><em><strong>Accepting new patients</strong></em></p>')
+            }
+            $('#results').append(`<p><strong>Address:</strong></p>
+             <p>${practice.visit_address.street}</p><p>${practice.visit_address.city}, ${practice.visit_address.state} ${practice.visit_address.zip}</p>`);
             if (practice.website) {
               $('#results').append(`<a href = "${practice.website}">Visit ${practice.name}'s website</a>`)
             }
