@@ -9,33 +9,35 @@
   <body>
     <div class="container">
       <div class="row">
-        <form id="input">
-          <label for="search">Enter your location (City, State):</search>
-          <input type="text" id="location">
-          <label for "searchType">Search by:</label>
-          <select id = "searchType">
-            <option value ="name">Doctor or practice name</option>
-            <option value ="disease">What's wrong with ya?</option>
-          </select>
-          <label for="query">Search:</label>
-          <input type="text" id ="query">
-          <select class="parameter " id = "sort">
-            <option value="full-name-asc"> Full name, ascending  </option>
-            <option value="full-name-desc"> Full name, descending </option>
-            <option value="last-name-asc"> Last name, ascending  </option>
-            <option value="last-name-desc"> Last name, descending  </option>
-            <option value="first-name-asc"> First name, ascending </option>
-            <option value="first-name-desc"> First name, descending  </option>
-            <option value="best-match-asc"> Best Match  </option>
-            <option value="rating-asc"> Highest Rated  </option>
-          </select>
-
-          <button type="submit">Search doctors</button>
-        </form>
+        <div class = "jumboTron">
+          <form id="input">
+            <div class ="form-group">
+              <label for="search">Enter your location (City, State):</search>
+              <input type="text" id="location" class = "form-control">
+              <label for "searchType">Search by:</label>
+              <select id = "searchType" class = "form-control">
+                <option value ="name">Doctor or practice name</option>
+                <option value ="disease">What's wrong with ya?</option>
+              </select>
+              <label for="query">Search:</label>
+              <input type="text" id ="query" class = "form-control">
+              <label for ="sort">Sort by:</label>
+              <select class="parameter " id = "sort" class = "form-control">
+                <option value="full-name-asc"> Full name, ascending  </option>
+                <option value="full-name-desc"> Full name, descending </option>
+                <option value="last-name-asc"> Last name, ascending  </option>
+                <option value="last-name-desc"> Last name, descending  </option>
+                <option value="first-name-asc"> First name, ascending </option>
+                <option value="first-name-desc"> First name, descending  </option>
+                <option value="best-match-asc"> Best Match  </option>
+                <option value="rating-asc"> Highest Rated  </option>
+              </select>
+              <button type="submit" class="btn btn-success">Search doctors</button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="row">
+      <div class="row hideOnLoad">
         <table class="table">
           <thead>
             <tr>

@@ -2,6 +2,7 @@ import { Doctor } from './../js/doctor.js';
 
 $(document).ready(function() {
   $('#input').submit(function(event) {
+    $('.hideOnLoad').show();
     $('#results').text("")
     event.preventDefault();
 
