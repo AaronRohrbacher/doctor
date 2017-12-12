@@ -6,6 +6,10 @@
 
 ## Setup/Installation Requirements
 
+* _NOTE:_ For security purposes, the API key for the betterdoctor.com API is not included in this repository, and the application won't function without it. Obtain an API key from http://betterdoctor.com, an place it in an file named '.env' in the root directory of this project.
+  * in your '.env' file, placed at the root directory of the project, add this line of code:
+  `exports.apiKey='your new api key'`
+
 * _Clone this repository_
 * _Install Node if you haven't already!_
 * _In your bash console, navigate to the root of this project. Run `$ npm install`._
